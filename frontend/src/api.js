@@ -1,11 +1,15 @@
 function apiBase() {
+  const fromEnv = import.meta.env.VITE_API_URL;
+  if (typeof fromEnv === "string" && fromEnv.length > 0) {
+    return fromEnv.replace(/\/$/, "");
+  }
   if (typeof window !== "undefined") {
     const host = window.location.hostname;
-    if (host !== "localhost" && host !== "127.0.0.1") {
-      return "";
+    if (host === "localhost" || host === "127.0.0.1") {
+      return "http://localhost:4000";
     }
   }
-  return import.meta.env.VITE_API_URL || "http://localhost:4000";
+  return "";
 }
 
 const API = apiBase();

@@ -153,13 +153,16 @@ The only extra local step is MongoDB. Use Docker as above, or point `MONGO_URI` 
 
 ## Live demo
 
-The public URL is in `LIVE_URL.txt` (a Cloudflare tunnel to this machine). While the two apps are running, a same-origin proxy is:
+The public URL is in `LIVE_URL.txt`.
 
-```bash
-node scripts/live-proxy.mjs
-```
+On **Render** (static frontend):
+- Build: `npm install && npm run build` in `frontend/`
+- Publish directory: `dist`
+- Node version: **22** (Vite 8 needs Node 20.12+)
+- Environment: `VITE_API_URL` = your Express API URL (another Render web service in `backend/`), e.g. `https://your-api.onrender.com`
+- SPA rewrite: `frontend/public/_redirects` sends `/dashboard` and `/docs/:id` to `index.html`. Redeploy after pulling that file.
 
-That serves the Vite app and `/api` on one port (`8080`). Reviewers should use the URL in `LIVE_URL.txt`, not localhost.
+Do not bake `VITE_API_URL=http://localhost:4000` into the production build. That only works on your machine.
 
 ## Layout
 

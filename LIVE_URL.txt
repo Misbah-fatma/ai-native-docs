@@ -1,20 +1,13 @@
 Live product URL:
-https://benefits-wellness-astronomy-llp.trycloudflare.com
+https://ai-native-docs-1.onrender.com
 
 Sign in with a seeded account (password for all: demo1234):
 - alex@ajaia.dev
 - jordan@ajaia.dev
 - sam@ajaia.dev
 
-This is a Cloudflare tunnel in front of the local apps (React + Express) via scripts/live-proxy.mjs.
-It stays up only while this machine is on and these processes are running:
-- frontend on :5173
-- backend on :4000
-- node scripts/live-proxy.mjs on :8080
-- the cloudflared tunnel
+This is the Render static frontend. Set `VITE_API_URL` at build time to your Render API service (the Express app), then redeploy. Direct routes like `/dashboard` need the `_redirects` rewrite in `frontend/public/_redirects`.
 
-If the URL stops working, start those four again. cloudflared prints a new https://*.trycloudflare.com link — paste it on the first line of this file.
-
-Local (same product):
+Local:
 - Frontend: http://localhost:5173
 - Backend: http://localhost:4000

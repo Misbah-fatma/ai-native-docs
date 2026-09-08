@@ -6,6 +6,9 @@
     "dev": "vite",
     "build": "vite build"
   },
+  "engines": {
+    "node": ">=20.12.0"
+  },
   "dependencies": {
     "@tiptap/extension-placeholder": "^3.31.3",
     "@tiptap/extension-underline": "^3.31.3",
