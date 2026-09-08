@@ -41,7 +41,7 @@ export default function ConfirmDialog({
             type="button"
             disabled={busy}
             onClick={onClose}
-            className="rounded-full border border-line px-4 py-2 text-sm hover:bg-paper-deep disabled:opacity-50"
+            className="rounded-full border border-line px-4 py-2 text-sm hover:bg-wash hover:text-ink disabled:opacity-50"
           >
             {cancelLabel}
           </button>
@@ -51,8 +51,8 @@ export default function ConfirmDialog({
             onClick={onConfirm}
             className={
               danger
-                ? "rounded-full bg-accent px-4 py-2 text-sm font-medium text-paper hover:bg-accent-dark disabled:opacity-50"
-                : "rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper hover:bg-accent-dark disabled:opacity-50"
+                ? "rounded-full bg-accent px-4 py-2 text-sm font-medium text-paper hover:bg-ink-hover hover:text-paper disabled:opacity-50"
+                : "rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper hover:bg-ink-hover hover:text-paper disabled:opacity-50"
             }
           >
             {busy ? "Working…" : confirmLabel}

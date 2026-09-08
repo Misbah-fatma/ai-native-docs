@@ -4,7 +4,9 @@
 :root {
   --paper: #f3eee4;
   --paper-deep: #e7dccb;
+  --wash: #eadfcf;
   --ink: #1c1612;
+  --ink-hover: #342a22;
   --ink-soft: #5e534a;
   --line: #d9ccb8;
   --card: #fffaf2;
@@ -17,7 +19,9 @@
 @theme inline {
   --color-paper: var(--paper);
   --color-paper-deep: var(--paper-deep);
+  --color-wash: var(--wash);
   --color-ink: var(--ink);
+  --color-ink-hover: var(--ink-hover);
   --color-ink-soft: var(--ink-soft);
   --color-line: var(--line);
   --color-card: var(--card);
@@ -131,6 +135,11 @@ textarea {
   float: left;
   height: 0;
   pointer-events: none;
+}
+
+.toolbar-btn:hover:not(:disabled) {
+  background: var(--wash);
+  color: var(--ink);
 }
 
 .toolbar-btn[aria-pressed="true"] {

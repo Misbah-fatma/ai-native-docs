@@ -146,7 +146,7 @@ function ToolButton({ label, pressed, onClick, disabled, children }) {
       aria-pressed={pressed}
       disabled={disabled}
       onClick={onClick}
-      className="toolbar-btn min-w-8 rounded-lg px-2.5 py-1.5 text-sm font-semibold hover:bg-paper-deep disabled:opacity-40"
+      className="toolbar-btn min-w-8 rounded-lg px-2.5 py-1.5 text-sm font-semibold hover:bg-wash hover:text-ink disabled:opacity-40"
     >
       {children}
     </button>

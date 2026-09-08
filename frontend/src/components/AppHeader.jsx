@@ -28,7 +28,7 @@ export default function AppHeader({ user, backHref, backLabel = "All documents" 
         <button
           type="button"
           onClick={signOut}
-          className="rounded-full border border-line px-3 py-1.5 text-sm hover:bg-paper-deep"
+          className="rounded-full border border-line px-3 py-1.5 text-sm hover:bg-wash hover:text-ink"
         >
           Switch user
         </button>

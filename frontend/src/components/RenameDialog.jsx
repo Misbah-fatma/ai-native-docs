@@ -45,14 +45,14 @@ export default function RenameDialog({ value, onChange, onConfirm, onClose }) {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-full border border-line px-4 py-2 text-sm hover:bg-paper-deep"
+            className="rounded-full border border-line px-4 py-2 text-sm hover:bg-wash hover:text-ink"
           >
             Cancel
           </button>
           <button
             type="button"
             onClick={onConfirm}
-            className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper hover:bg-accent-dark"
+            className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper hover:bg-ink-hover hover:text-paper"
           >
             OK
           </button>

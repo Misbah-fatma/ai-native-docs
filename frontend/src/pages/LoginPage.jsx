@@ -103,7 +103,7 @@ export default function LoginPage() {
               <AuthFields email={email} password={password} setEmail={setEmail} setPassword={setPassword} />
               {error ? <p className="mt-4 text-sm text-accent">{error}</p> : null}
               <button
-                className="mt-6 w-full rounded-full bg-ink px-4 py-3 text-sm font-semibold text-paper transition hover:bg-accent-dark disabled:opacity-60"
+                className="mt-6 w-full rounded-full bg-ink px-4 py-3 text-sm font-semibold text-paper transition hover:bg-ink-hover hover:text-paper disabled:opacity-60"
                 disabled={pending}
                 type="submit"
               >
@@ -128,7 +128,7 @@ export default function LoginPage() {
               <AuthFields email={email} password={password} setEmail={setEmail} setPassword={setPassword} />
               {error ? <p className="mt-4 text-sm text-accent">{error}</p> : null}
               <button
-                className="mt-6 w-full rounded-full bg-ink px-4 py-3 text-sm font-semibold text-paper transition hover:bg-accent-dark disabled:opacity-60"
+                className="mt-6 w-full rounded-full bg-ink px-4 py-3 text-sm font-semibold text-paper transition hover:bg-ink-hover hover:text-paper disabled:opacity-60"
                 disabled={pending}
                 type="submit"
               >

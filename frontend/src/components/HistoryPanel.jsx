@@ -73,7 +73,7 @@ export default function HistoryPanel({ documentId, role, onRestore, onClose }) {
               type="button"
               disabled={pending}
               onClick={() => void checkpoint()}
-              className="rounded-full border border-line px-3 py-1.5 text-sm hover:bg-paper-deep disabled:opacity-50"
+              className="rounded-full border border-line px-3 py-1.5 text-sm hover:bg-wash hover:text-ink disabled:opacity-50"
             >
               {pending ? "Saving…" : "Save checkpoint"}
             </button>

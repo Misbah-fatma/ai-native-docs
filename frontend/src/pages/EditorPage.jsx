@@ -188,7 +188,7 @@ function DocumentEditor({ user, initialDocument }) {
                 type="button"
                 aria-label="Rename document"
                 onClick={startRename}
-                className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-ink-soft hover:bg-paper-deep hover:text-ink"
+                className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-ink-soft hover:bg-wash hover:text-ink"
               >
                 <PencilIcon />
               </button>
@@ -214,8 +214,10 @@ function DocumentEditor({ user, initialDocument }) {
             <button
               type="button"
               onClick={openCommentsWithSelection}
-              className={`rounded-full border px-4 py-2 text-sm hover:bg-paper-deep ${
-                panel === "comments" ? "border-ink bg-ink text-paper hover:bg-accent-dark" : "border-line"
+              className={`rounded-full border px-4 py-2 text-sm ${
+                panel === "comments"
+                  ? "border-ink bg-ink text-paper hover:bg-ink-hover hover:text-paper"
+                  : "border-line hover:bg-wash hover:text-ink"
               }`}
             >
               Comments{openComments ? ` (${openComments})` : ""}
@@ -223,8 +225,10 @@ function DocumentEditor({ user, initialDocument }) {
             <button
               type="button"
               onClick={openSuggestionsWithSelection}
-              className={`rounded-full border px-4 py-2 text-sm hover:bg-paper-deep ${
-                panel === "suggestions" ? "border-ink bg-ink text-paper hover:bg-accent-dark" : "border-line"
+              className={`rounded-full border px-4 py-2 text-sm ${
+                panel === "suggestions"
+                  ? "border-ink bg-ink text-paper hover:bg-ink-hover hover:text-paper"
+                  : "border-line hover:bg-wash hover:text-ink"
               }`}
             >
               Suggest{openSuggestions ? ` (${openSuggestions})` : ""}
@@ -232,8 +236,10 @@ function DocumentEditor({ user, initialDocument }) {
             <button
               type="button"
               onClick={() => setPanel(panel === "history" ? null : "history")}
-              className={`rounded-full border px-4 py-2 text-sm hover:bg-paper-deep ${
-                panel === "history" ? "border-ink bg-ink text-paper hover:bg-accent-dark" : "border-line"
+              className={`rounded-full border px-4 py-2 text-sm ${
+                panel === "history"
+                  ? "border-ink bg-ink text-paper hover:bg-ink-hover hover:text-paper"
+                  : "border-line hover:bg-wash hover:text-ink"
               }`}
             >
               History
@@ -241,8 +247,10 @@ function DocumentEditor({ user, initialDocument }) {
             <button
               type="button"
               onClick={() => setPanel(panel === "files" ? null : "files")}
-              className={`rounded-full border px-4 py-2 text-sm hover:bg-paper-deep ${
-                panel === "files" ? "border-ink bg-ink text-paper hover:bg-accent-dark" : "border-line"
+              className={`rounded-full border px-4 py-2 text-sm ${
+                panel === "files"
+                  ? "border-ink bg-ink text-paper hover:bg-ink-hover hover:text-paper"
+                  : "border-line hover:bg-wash hover:text-ink"
               }`}
             >
               Files{(document.attachments || []).length ? ` (${document.attachments.length})` : ""}
@@ -252,7 +260,7 @@ function DocumentEditor({ user, initialDocument }) {
               <button
                 type="button"
                 onClick={() => setShareOpen(true)}
-                className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper hover:bg-accent-dark"
+                className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper hover:bg-ink-hover hover:text-paper"
               >
                 Share
               </button>

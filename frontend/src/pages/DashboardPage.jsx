@@ -84,7 +84,7 @@ export default function DashboardPage({ user }) {
               type="button"
               onClick={() => fileRef.current?.click()}
               disabled={busy !== null}
-              className="rounded-full border border-line bg-card px-4 py-2.5 text-sm font-medium hover:bg-paper-deep disabled:opacity-60"
+              className="rounded-full border border-line bg-card px-4 py-2.5 text-sm font-medium hover:bg-wash hover:text-ink disabled:opacity-60"
             >
               {busy === "import" ? "Importing…" : "Import file"}
             </button>
@@ -92,7 +92,7 @@ export default function DashboardPage({ user }) {
               type="button"
               onClick={() => void createDocument()}
               disabled={busy !== null}
-              className="rounded-full bg-ink px-4 py-2.5 text-sm font-semibold text-paper hover:bg-accent-dark disabled:opacity-60"
+              className="rounded-full bg-ink px-4 py-2.5 text-sm font-semibold text-paper hover:bg-ink-hover hover:text-paper disabled:opacity-60"
             >
               {busy === "create" ? "Creating…" : "New document"}
             </button>

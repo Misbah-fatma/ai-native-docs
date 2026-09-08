@@ -34,7 +34,7 @@ export default function ExportMenu({ title, content }) {
         aria-expanded={open}
         aria-haspopup="menu"
         onClick={() => setOpen((value) => !value)}
-        className="rounded-full border border-line px-4 py-2 text-sm hover:bg-paper-deep"
+        className="rounded-full border border-line px-4 py-2 text-sm hover:bg-wash hover:text-ink"
       >
         Export
       </button>
@@ -47,7 +47,7 @@ export default function ExportMenu({ title, content }) {
             type="button"
             role="menuitem"
             onClick={() => exportAs("md")}
-            className="block w-full px-3 py-2 text-left text-sm hover:bg-paper-deep"
+            className="block w-full px-3 py-2 text-left text-sm hover:bg-wash hover:text-ink"
           >
             Markdown (.md)
           </button>
@@ -55,7 +55,7 @@ export default function ExportMenu({ title, content }) {
             type="button"
             role="menuitem"
             onClick={() => exportAs("pdf")}
-            className="block w-full px-3 py-2 text-left text-sm hover:bg-paper-deep"
+            className="block w-full px-3 py-2 text-left text-sm hover:bg-wash hover:text-ink"
           >
             PDF (.pdf)
           </button>

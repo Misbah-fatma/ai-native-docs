@@ -104,7 +104,7 @@ export default function FilesPanel({ document, user, role, onChange, onImported,
               type="button"
               disabled={pending}
               onClick={() => importRef.current?.click()}
-              className="rounded-full border border-line px-3 py-1.5 text-sm hover:bg-paper-deep disabled:opacity-50"
+              className="rounded-full border border-line px-3 py-1.5 text-sm hover:bg-wash hover:text-ink disabled:opacity-50"
             >
               Import into this draft
             </button>
@@ -112,7 +112,7 @@ export default function FilesPanel({ document, user, role, onChange, onImported,
               type="button"
               disabled={pending}
               onClick={() => attachRef.current?.click()}
-              className="rounded-full bg-ink px-3 py-1.5 text-sm font-medium text-paper hover:bg-accent-dark disabled:opacity-50"
+              className="rounded-full bg-ink px-3 py-1.5 text-sm font-medium text-paper hover:bg-ink-hover hover:text-paper disabled:opacity-50"
             >
               {pending ? "Working…" : "Attach a file"}
             </button>

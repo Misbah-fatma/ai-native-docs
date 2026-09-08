@@ -147,7 +147,7 @@ export default function ShareDialog({ document, onClose, onChange }) {
                 <button
                   type="submit"
                   disabled={pending || !email.trim()}
-                  className="rounded-xl bg-ink px-4 py-2 text-sm font-medium text-paper disabled:opacity-50"
+                  className="rounded-xl bg-ink px-4 py-2 text-sm font-medium text-paper hover:bg-ink-hover hover:text-paper disabled:opacity-50"
                 >
                   Invite
                 </button>

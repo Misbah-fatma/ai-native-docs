@@ -137,7 +137,7 @@ export default function SuggestionsPanel({
           <button
             type="submit"
             disabled={pending || !proposed.trim()}
-            className="mt-2 rounded-full bg-ink px-3 py-1.5 text-sm font-medium text-paper disabled:opacity-50"
+            className="mt-2 rounded-full bg-ink px-3 py-1.5 text-sm font-medium text-paper hover:bg-ink-hover hover:text-paper disabled:opacity-50"
           >
             {pending ? "Sending…" : "Suggest"}
           </button>
