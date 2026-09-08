@@ -1,0 +1,5 @@
+Team standup notes
+
+Keep this file small.
+
+Decision: ship sharing before realtime collab.
