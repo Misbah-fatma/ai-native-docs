@@ -1,0 +1,19 @@
+Screenshots for the Drive packet. Recapture with:
+
+  cd /path/to/assignemnt
+  # apps already running on :5173 and :4000
+  node scripts/capture-screenshots.mjs
+
+01-sign-in.png          Sign in and create account (seeded shortcuts too)
+02-dashboard.png        Owned by you / Shared with you
+03-editor.png           TipTap editor, autosave, role chip
+04-rename.png           Pencil opens OK/Cancel rename dialog
+05-share.png            Invite by email, Can edit / Can view
+06-comments.png         Sidebar comments (seeded note on Q3)
+07-history.png          Version history + checkpoint
+08-files.png            Attach a file / import into this draft
+09-export.png           Markdown (.md) and PDF (.pdf)
+10-delete-confirm.png   In-app confirm (no window.confirm)
+
+Extra local step: MongoDB via `docker compose up -d mongo` (see README.md).
+These images are the visual stand-in so reviewers can see the product without that step.

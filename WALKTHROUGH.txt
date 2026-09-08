@@ -1,0 +1,25 @@
+Walkthrough video URL:
+
+(paste unlisted Loom or YouTube URL here)
+
+If the video is not up yet, use the live URL in LIVE_URL.txt and the screenshots in docs/screenshots/. The script below is the recording path.
+
+Suggested script (keep it moving; do not narrate every click):
+
+0:00–0:20  Product intent
+  Ink is a small collaborative editor, not a Docs clone. The loop is write, save, share, reopen.
+
+0:20–1:10  Main flow as Alex
+  Sign in as Alex (alex@ajaia.dev / demo1234). Open Q3 working notes. Show bold/italic/heading/list. Click the pencil, rename in the dialog, OK. Wait for “Saved”. Refresh to prove persistence. Export both .md and .pdf.
+
+1:10–2:10  Sharing and roles
+  Share the doc with sam@ajaia.dev as Can view. Switch user. Sign in as Sam. Show it under Shared with you as View only. Toolbar is disabled.
+
+2:10–2:50  Comments, suggestions, history, presence
+  As Sam, select a sentence, open Comments, post a note. Open Suggest, propose a replacement. Switch to Alex. You should see Sam in presence if both tabs are open. Resolve Jordan’s seeded comment. Accept Jordan’s seeded suggestion. Open History, save a checkpoint, restore an older version (confirm).
+
+2:50–3:30  Files
+  From the dashboard, import frontend/public/examples/weekly-update.md as a new doc. Open Q3, click Files, attach frontend/public/examples/standup.txt, then Import into this draft and Insert below.
+
+3:30–4:00  Cuts, implementation, AI
+  Deprioritized: CRDT co-editing (two people typing the same sentence still last-write-wins). Stretch shipped: roles, Markdown/PDF, comments, suggestions, presence, signup, version history. AI (Cursor) sped up boilerplate; Prisma/SQLite and a Docs clone were rejected. Tests cover access, import, suggestions, and versions.

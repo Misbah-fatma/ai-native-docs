@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --paper: #f3eee4;
+  --paper-deep: #e7dccb;
+  --ink: #1c1612;
+  --ink-soft: #5e534a;
+  --line: #d9ccb8;
+  --card: #fffaf2;
+  --accent: #b5471c;
+  --accent-dark: #8c3414;
+  --forest: #2f5d4a;
+  --shared: #355f78;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-forest: var(--forest);
+  --color-shared: var(--shared);
+  --font-sans: "Figtree", "Segoe UI", sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1200px 500px at 10% -10%, rgba(181, 71, 28, 0.08), transparent 55%),
+    radial-gradient(900px 420px at 100% 0%, rgba(47, 93, 74, 0.08), transparent 50%),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.editor-shell .tiptap {
+  outline: none;
+  min-height: 62vh;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.editor-shell .tiptap[contenteditable="false"] {
+  caret-color: transparent;
+  cursor: default;
+}
+
+.editor-shell .tiptap p {
+  margin: 0 0 0.9rem;
+}
+
+.editor-shell .tiptap h1,
+.editor-shell .tiptap h2,
+.editor-shell .tiptap h3 {
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 1.4rem 0 0.7rem;
+}
+
+.editor-shell .tiptap h1 {
+  font-size: 2.05rem;
+}
+
+.editor-shell .tiptap h2 {
+  font-size: 1.45rem;
+}
+
+.editor-shell .tiptap h3 {
+  font-size: 1.2rem;
+}
+
+.editor-shell .tiptap strong,
+.editor-shell .tiptap b {
+  font-weight: 700;
+}
+
+.editor-shell .tiptap em,
+.editor-shell .tiptap i {
+  font-style: italic;
+}
+
+.editor-shell .tiptap u {
+  text-decoration: underline;
+}
+
+.editor-shell .tiptap ul,
+.editor-shell .tiptap ol {
+  margin: 0 0 1rem;
+  padding-left: 1.4rem;
+}
+
+.editor-shell .tiptap ul {
+  list-style: disc;
+}
+
+.editor-shell .tiptap ol {
+  list-style: decimal;
+}
+
+.editor-shell .tiptap li p {
+  margin: 0.2rem 0;
+}
+
+.editor-shell .tiptap p.is-editor-empty:first-child::before {
+  color: #9a8d80;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.toolbar-btn[aria-pressed="true"] {
+  background: #efe4d4;
+  color: var(--accent-dark);
+}

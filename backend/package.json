@@ -1,0 +1,28 @@
+{
+  "name": "ink-backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js",
+    "seed": "node seed.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@tiptap/extension-underline": "^3.31.3",
+    "@tiptap/html": "^3.31.3",
+    "@tiptap/starter-kit": "^3.31.3",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mammoth": "^1.12.2",
+    "marked": "^18.0.12",
+    "mongoose": "^9.9.5",
+    "multer": "^2.3.0"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.0"
+  }
+}
