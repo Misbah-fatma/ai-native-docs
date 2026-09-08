@@ -160,7 +160,7 @@ On **Render** (static frontend):
 - Publish directory: `dist`
 - Node version: **22** (Vite 8 needs Node 20.12+)
 - Environment: `VITE_API_URL` = your Express API URL (another Render web service in `backend/`), e.g. `https://your-api.onrender.com`
-- SPA rewrite: `frontend/public/_redirects` sends `/dashboard` and `/docs/:id` to `index.html`. Redeploy after pulling that file.
+- The app uses hash routes (`/#/dashboard`) so Render does not 404 on refresh. Optional: in the static site, Settings → Redirects/Rewrites, add Rewrite `/*` → `/index.html`.
 
 Do not bake `VITE_API_URL=http://localhost:4000` into the production build. That only works on your machine.
 

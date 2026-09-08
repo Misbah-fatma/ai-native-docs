@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { api, DEMO_ACCOUNTS, setToken } from "../api";
 
-export default function LoginPage() {
+export default function LoginPage({ onSignedIn }) {
+  const navigate = useNavigate();
   const [mode, setMode] = useState("signin");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("alex@ajaia.dev");
@@ -11,7 +13,8 @@ export default function LoginPage() {
 
   async function finish(result) {
     setToken(result.token);
-    window.location.assign("/dashboard");
+    onSignedIn?.(result.user);
+    navigate("/dashboard");
   }
 
   async function signIn(nextEmail, nextPassword) {

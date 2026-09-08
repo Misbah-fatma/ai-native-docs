@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { clearToken } from "../api";
 
-export default function AppHeader({ user, backHref, backLabel = "All documents" }) {
+export default function AppHeader({ user, onSignOut, backHref, backLabel = "All documents" }) {
+  const navigate = useNavigate();
+
   function signOut() {
     clearToken();
-    window.location.assign("/");
+    onSignOut?.();
+    navigate("/");
   }
 
   return (

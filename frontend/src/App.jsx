@@ -26,14 +26,29 @@ export default function App() {
 
   return (
     <Routes>
-      <Route path="/" element={user ? <Navigate to="/dashboard" replace /> : <LoginPage />} />
+      <Route
+        path="/"
+        element={user ? <Navigate to="/dashboard" replace /> : <LoginPage onSignedIn={setUser} />}
+      />
       <Route
         path="/dashboard"
-        element={user ? <DashboardPage user={user} /> : <Navigate to="/" replace />}
+        element={
+          user ? (
+            <DashboardPage user={user} onSignOut={() => setUser(null)} />
+          ) : (
+            <Navigate to="/" replace />
+          )
+        }
       />
       <Route
         path="/docs/:id"
-        element={user ? <EditorPage user={user} /> : <Navigate to="/" replace />}
+        element={
+          user ? (
+            <EditorPage user={user} onSignOut={() => setUser(null)} />
+          ) : (
+            <Navigate to="/" replace />
+          )
+        }
       />
       <Route path="*" element={<Navigate to={user ? "/dashboard" : "/"} replace />} />
     </Routes>

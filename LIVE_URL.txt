@@ -6,7 +6,10 @@ Sign in with a seeded account (password for all: demo1234):
 - jordan@ajaia.dev
 - sam@ajaia.dev
 
-This is the Render static frontend. Set `VITE_API_URL` at build time to your Render API service (the Express app), then redeploy. Direct routes like `/dashboard` need the `_redirects` rewrite in `frontend/public/_redirects`.
+Render static frontend. After deploy, routes are hash URLs so they do not 404:
+https://ai-native-docs-1.onrender.com/#/dashboard
+
+Set `VITE_API_URL` at build time to your Express API on Render.
 
 Local:
 - Frontend: http://localhost:5173

@@ -14,7 +14,7 @@ import ShareDialog from "../components/ShareDialog.jsx";
 import PresenceBar from "../components/PresenceBar.jsx";
 import SuggestionsPanel from "../components/SuggestionsPanel.jsx";
 
-export default function EditorPage({ user }) {
+export default function EditorPage({ user, onSignOut }) {
   const { id } = useParams();
   const [doc, setDoc] = useState(null);
   const [missing, setMissing] = useState(false);
@@ -47,10 +47,10 @@ export default function EditorPage({ user }) {
     return <p className="p-8 text-sm text-ink-soft">Opening document…</p>;
   }
 
-  return <DocumentEditor key={doc.id} user={user} initialDocument={doc} />;
+  return <DocumentEditor key={doc.id} user={user} initialDocument={doc} onSignOut={onSignOut} />;
 }
 
-function DocumentEditor({ user, initialDocument }) {
+function DocumentEditor({ user, initialDocument, onSignOut }) {
   const [document, setDocument] = useState(initialDocument);
   const [title, setTitle] = useState(initialDocument.title);
   const [saveState, setSaveState] = useState("saved");
@@ -177,7 +177,7 @@ function DocumentEditor({ user, initialDocument }) {
 
   return (
     <div className="min-h-screen">
-      <AppHeader user={user} backHref="/dashboard" />
+      <AppHeader user={user} onSignOut={onSignOut} backHref="/dashboard" />
       <div className="border-b border-line/80 bg-card/80 px-4 py-3 md:px-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 lg:flex-row lg:items-center">
           <div className="flex min-w-0 flex-1 flex-col gap-1">

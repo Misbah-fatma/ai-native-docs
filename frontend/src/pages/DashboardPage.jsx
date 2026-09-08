@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { api, formatUpdated, initials } from "../api";
 import AppHeader from "../components/AppHeader.jsx";
 import ConfirmDialog from "../components/ConfirmDialog.jsx";
 
-export default function DashboardPage({ user }) {
+export default function DashboardPage({ user, onSignOut }) {
+  const navigate = useNavigate();
   const fileRef = useRef(null);
   const [owned, setOwned] = useState([]);
   const [shared, setShared] = useState([]);
@@ -30,7 +31,7 @@ export default function DashboardPage({ user }) {
         method: "POST",
         body: JSON.stringify({ title: "Untitled" }),
       });
-      window.location.assign(`/docs/${result.document.id}`);
+      navigate(`/docs/${result.document.id}`);
     } catch (err) {
       setError(err.message);
       setBusy(null);
@@ -44,7 +45,7 @@ export default function DashboardPage({ user }) {
       const data = new FormData();
       data.set("file", file);
       const result = await api("/api/documents/import", { method: "POST", body: data });
-      window.location.assign(`/docs/${result.document.id}`);
+      navigate(`/docs/${result.document.id}`);
     } catch (err) {
       setError(err.message);
       setBusy(null);
@@ -68,7 +69,7 @@ export default function DashboardPage({ user }) {
 
   return (
     <div className="min-h-screen">
-      <AppHeader user={user} />
+      <AppHeader user={user} onSignOut={onSignOut} />
       <main className="mx-auto max-w-5xl px-4 py-10 md:px-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
