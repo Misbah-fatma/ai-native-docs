@@ -14,7 +14,7 @@ Express API  (:4000)
 MongoDB (document store)
 ```
 
-Locally the frontend origin is `http://localhost:5173` and the API origin is `http://localhost:4000`. CORS allows that client origin only. For the live URL, a tiny proxy (`scripts/live-proxy.mjs`) puts both behind one public origin so the browser can call `/api` same-origin.
+Locally the frontend origin is `http://localhost:5173` and the API origin is `http://localhost:4000`. CORS reflects any request origin. For the live URL, a tiny proxy (`scripts/live-proxy.mjs`) can still put both behind one public origin so the browser can call `/api` same-origin.
 
 ## Auth
 

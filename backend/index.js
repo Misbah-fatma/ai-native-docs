@@ -14,10 +14,9 @@ dotenv.config({ path: path.join(__dirname, ".env") });
 
 const PORT = Number(process.env.PORT || 4000);
 const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/ink";
-const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || "http://localhost:5173";
 
 const app = express();
-app.use(cors({ origin: CLIENT_ORIGIN }));
+app.use(cors({ origin: true }));
 app.use(express.json({ limit: "2mb" }));
 
 app.get("/api/health", (_req, res) => {
