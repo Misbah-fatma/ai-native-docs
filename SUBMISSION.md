@@ -48,16 +48,18 @@ Password: `demo1234`
 
 | File | What it shows |
 | --- | --- |
-| `docs/screenshots/01-sign-in.png` | Seeded sign-in |
-| `docs/screenshots/02-dashboard.png` | Owned vs shared |
-| `docs/screenshots/03-editor.png` | Editor, autosave, toolbar |
-| `docs/screenshots/04-rename.png` | Rename dialog (OK / Cancel) |
-| `docs/screenshots/05-share.png` | Share with Can edit / Can view |
-| `docs/screenshots/06-comments.png` | Comments sidebar |
-| `docs/screenshots/07-history.png` | Version history |
-| `docs/screenshots/08-files.png` | Attach / import into draft |
-| `docs/screenshots/09-export.png` | Markdown and PDF export |
-| `docs/screenshots/10-delete-confirm.png` | In-app delete confirmation |
+| `docs/screenshots/01-sign-in.png` | Sign in + reviewer shortcuts |
+| `docs/screenshots/02-create-account.png` | Create account |
+| `docs/screenshots/03-dashboard.png` | Owned vs shared |
+| `docs/screenshots/04-editor.png` | Editor, Suggest, presence |
+| `docs/screenshots/05-rename.png` | Rename dialog (OK / Cancel) |
+| `docs/screenshots/06-share.png` | Share with Can edit / Can view |
+| `docs/screenshots/07-comments.png` | Comments sidebar |
+| `docs/screenshots/08-suggestions.png` | Suggestion accept / reject |
+| `docs/screenshots/09-history.png` | Version history |
+| `docs/screenshots/10-files.png` | Attach / import into draft |
+| `docs/screenshots/11-export.png` | Markdown and PDF export |
+| `docs/screenshots/12-delete-confirm.png` | In-app delete confirmation |
 
 MongoDB (Docker or a URI in `backend/.env`) is the only extra local setup step. These screenshots are the visual stand-in for that step.
 
